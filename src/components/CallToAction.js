@@ -4,7 +4,7 @@ import restaurantImage from "../assets/restaurantfood.jpg";
 const CallToAction = () => (
   <div
     className="text-primary-bg hero-section py-2 section-padding"
-    style={{ marginBottom: "4rem" }}
+    style={{ marginBottom: "6rem" }}
   >
     <div>
       <h1 className="heading text-secondary m-0">Little Lemon</h1>
@@ -17,7 +17,7 @@ const CallToAction = () => (
         has a rustic and relaxed atmosphere with moderate prices, making it a
         popular place for a meal any time of the day.
       </p>
-      <button className="text-secondary-bg text-primary reserve-table px-2 font-bold btn">
+      <button className="text-secondary-bg text-primary reserve-table px-2 font-bold btn btn-primary">
         Reserve Table
       </button>
     </div>

@@ -153,17 +153,22 @@
   }
 }
 
-.btn {
+.btn{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-radius: 1rem;
   border: none;
   font-weight: bold;
 
-  &:active {
-    box-shadow: 0 1px 5px #F4CE14, 0 1px 5px #F4CE14, 0 2px 5px #F4CE14;
-    background-color: #495E57;
-    color: #EDEFEE;
+  &-primary {
+    color: #495E57;
+    background-color: #F4CE14;
+
+    &:active {
+      box-shadow: 0 1px 5px #F4CE14, 0 1px 5px #F4CE14, 0 2px 5px #F4CE14;
+      background-color: #495E57;
+      color: #EDEFEE;
+    }
   }
 }
 
@@ -175,4 +180,12 @@
     padding-left: 10rem;
     padding-right: 10rem;
   }
+}
+
+.d-flex{
+  display: flex;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
