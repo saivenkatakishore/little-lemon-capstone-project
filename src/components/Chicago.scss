@@ -1,0 +1,17 @@
+.chicago{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .image-1, .image-2{
+        position: absolute;
+        border-radius: 1rem;
+    }
+
+    .image-1{
+        right: 0%;
+    }
+    .image-2{
+        right: 40%;
+        margin-top: 30%;
+    }
+}
