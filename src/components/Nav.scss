@@ -4,6 +4,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: calc(100% - 6rem);
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid;
+
+    @media screen and (min-width:1441px) {
+        width: calc(100% - 30rem);
+    }
+
 
     ul {
         list-style: none;

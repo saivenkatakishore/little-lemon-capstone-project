@@ -9,7 +9,7 @@ const Homepage = () => {
       <CallToAction />
       <Specials />
       <CustomersSay />
-      <Chicago />
+      <Chicago/>
     </>
   );
 };

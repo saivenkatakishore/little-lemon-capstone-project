@@ -1,7 +1,7 @@
 import { Nav } from "./Nav";
 
 export const Header = () => (
-  <header className="section-padding">
+  <header>
     <Nav />
   </header>
 );

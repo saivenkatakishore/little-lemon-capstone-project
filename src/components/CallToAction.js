@@ -4,7 +4,7 @@ import restaurantImage from "../assets/restaurantfood.jpg";
 const CallToAction = () => (
   <div
     className="text-primary-bg hero-section py-2 section-padding"
-    style={{ marginBottom: "6rem" }}
+    style={{ marginBottom: "6rem"}}
   >
     <div>
       <h1 className="heading text-secondary m-0">Little Lemon</h1>

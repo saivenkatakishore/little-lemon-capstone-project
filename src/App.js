@@ -1,3 +1,5 @@
+// Please do npm i to get scss packages installed
+
 import "./App.scss";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -8,7 +10,7 @@ function App() {
     <>
       <div>
         <Header />
-        <main className="text-reg">
+        <main className="text-reg" style={{ paddingTop: "4.725rem" }}>
           <Outlet />
         </main>
         <Footer />

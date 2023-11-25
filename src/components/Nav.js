@@ -3,7 +3,7 @@ import Logo from "../Logo.svg";
 import "./Nav.scss";
 
 export const Nav = () => (
-  <nav className="font-md">
+  <nav className="font-md section-padding">
     <ul>
       <li>
         <img alt="Logo" src={Logo} />
@@ -14,19 +14,19 @@ export const Nav = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/booking">About</Link>
+        <Link to="/">About</Link>
       </li>
       <li>
-        <Link to="/booking">Menu</Link>
+        <Link to="/">Menu</Link>
       </li>
       <li>
-        <Link to="/booking">Reservations</Link>
+        <Link to="/">Reservations</Link>
       </li>
       <li>
-        <Link to="/booking">Order Online</Link>
+        <Link to="/">Order Online</Link>
       </li>
       <li>
-        <Link to="/booking">Login</Link>
+        <Link to="/">Login</Link>
       </li>
     </ul>
   </nav>
