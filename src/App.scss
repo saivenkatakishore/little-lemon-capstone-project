@@ -80,6 +80,14 @@
     }
   }
 
+  &-other {
+    color: #FBDABB;
+
+    &-bg {
+      background-color: #FBDABB;
+    }
+  }
+
   &-black {
     color: #333333;
 
@@ -153,7 +161,7 @@
   }
 }
 
-.btn{
+.btn {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-radius: 1rem;
@@ -182,10 +190,14 @@
   }
 }
 
-.d-flex{
+.d-flex {
   display: flex;
 }
 
-.justify-between{
+.justify-between {
   justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
 }

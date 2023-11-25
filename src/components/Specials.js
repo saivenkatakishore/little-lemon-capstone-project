@@ -11,7 +11,7 @@ const Specials = () => {
         <button className="btn btn-primary px-2 font-bold">Online Menu</button>
       </div>
       <div className="d-flex justify-between">
-        {specialsList.map((item, index) => (
+        {specialsList.map((item) => (
           <Card key={item.name} {...item} />
         ))}
       </div>
@@ -23,7 +23,7 @@ const Card = ({ name, description, price, url }) => {
   return (
     <div className="specials-card text-white-bg">
       <div>
-        <img alt="dish image" src={url} width={"100%"} />
+        <img alt="dish" src={url} width={"100%"} />
         <div className="px-1">
           <div className="d-flex justify-between py-1">
             <div className="font-bold">{name}</div>

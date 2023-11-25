@@ -1,0 +1,16 @@
+.testimonials{
+    padding-top: 0;
+    padding-bottom: 4rem;
+    min-height: 20rem;
+    display: flex;
+    align-items: center;
+
+    .review-card{
+        border-radius: 1rem;
+        width: 20%;
+        padding: 1rem;
+        img{
+            border-radius: 50%;
+        }
+    }
+}
