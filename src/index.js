@@ -6,8 +6,8 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import BookingPage from "./components/BookingPage";
+import Homepage from "./components/home/Homepage";
+import BookingPage from "./components/booking/BookingPage";
 
 const appRouter = createBrowserRouter([
   {

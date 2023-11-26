@@ -1,4 +1,4 @@
-import restaurant from "../assets/restaurant.jpg";
+import restaurant from "../../assets/restaurant.jpg";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 
@@ -45,7 +45,7 @@ export const Footer = () => (
             className="text-secondary font-md"
             style={{ padding: "0.5rem 0 1rem 3rem", fontSize: "1.5rem" }}
           >
-            Social Media Links
+            Share your experience @
           </div>
           <ul className="d-flex">
             <li>

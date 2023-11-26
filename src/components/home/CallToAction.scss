@@ -1,15 +1,22 @@
-.hero-section{
+.hero-section {
     display: flex;
     justify-content: space-around;
     min-height: 18rem;
-    div:first-child{
+
+    div:first-child {
         flex: 2;
     }
-    div:last-child{
+
+    div:last-child {
         flex: 1;
     }
-    img{
+
+    img {
         position: absolute;
         border-radius: 1rem;
+    }
+
+    #booking {
+        text-decoration: none;
     }
 }

@@ -1,0 +1,9 @@
+.reservation-form{
+    .form-field{
+        padding: 1rem;
+        flex: 1;
+        input, select, label{
+            flex: 1;
+        }
+    }
+}

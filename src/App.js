@@ -1,8 +1,8 @@
 // Please do npm i to get scss packages installed
 
 import "./App.scss";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/header/Header";
+import { Footer } from "./components/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {

@@ -1,11 +1,11 @@
 import "./Specials.scss";
-import bike from "../assets/bike.svg";
+import bike from "../../assets/bike.svg";
 
 const Specials = () => {
   const specialsList = [...mockList];
 
   return (
-    <div className="section-padding" style={{ paddingBottom: "4rem" }}>
+    <section className="section-padding" style={{ paddingBottom: "4rem" }}>
       <div className="specials-header">
         <h1 className="heading">This week Specials!</h1>
         <button className="btn btn-primary px-2 font-bold">Online Menu</button>
@@ -15,7 +15,7 @@ const Specials = () => {
           <Card key={item.name} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

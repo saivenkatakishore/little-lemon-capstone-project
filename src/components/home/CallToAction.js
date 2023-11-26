@@ -1,8 +1,9 @@
 import "./CallToAction.scss";
-import restaurantImage from "../assets/restaurantfood.jpg";
+import restaurantImage from "../../assets/restaurantfood.jpg";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => (
-  <div
+  <section
     className="text-primary-bg hero-section py-2 section-padding"
     style={{ marginBottom: "6rem"}}
   >
@@ -17,14 +18,14 @@ const CallToAction = () => (
         has a rustic and relaxed atmosphere with moderate prices, making it a
         popular place for a meal any time of the day.
       </p>
-      <button className="text-secondary-bg text-primary reserve-table px-2 font-bold btn btn-primary">
+      <Link id="booking" to="/booking" className="text-secondary-bg text-primary px-2 font-bold btn btn-primary">
         Reserve Table
-      </button>
+      </Link>
     </div>
     <div>
       <img alt="restaurant" src={restaurantImage} height={450} width={350} />
     </div>
-  </div>
+  </section>
 );
 
 export default CallToAction;

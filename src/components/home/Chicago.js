@@ -1,9 +1,9 @@
 import "./Chicago.scss";
-import chefA from "../assets/MarioAdrianA.jpg";
-import chefB from "../assets/MarioAdrianB.jpg";
+import chefA from "../../assets/MarioAdrianA.jpg";
+import chefB from "../../assets/MarioAdrianB.jpg";
 
 const Chicago = () => (
-  <div className="section-padding chicago d-flex justify-between">
+  <section className="section-padding chicago d-flex justify-between">
     <div style={{ width: "50%" }}>
       <h1 className="heading text-primary m-0">Little Lemon</h1>
       <h2 className="sub-heading text-tertiary m-0 pb-2">Chicago</h2>
@@ -20,7 +20,7 @@ const Chicago = () => (
       <img alt="owners" src={chefA} width={"60%"} className="image-1"></img>
       <img alt="owners" src={chefB} width={"60%"} className="image-2"></img>
     </div>
-  </div>
+  </section>
 );
 
 export default Chicago;

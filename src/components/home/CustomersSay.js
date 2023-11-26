@@ -1,9 +1,9 @@
 import "./CustomersSay.scss";
-import star from "../assets/star.png";
+import star from "../../assets/star.png";
 
 const CustomersSay = () => {
   return (
-    <div className="section-padding testimonials text-other-bg">
+    <section className="section-padding testimonials text-other-bg">
       <div style={{ textAlign: "center", width: "100%" }}>
         <h1 className="heading">Testimonials</h1>
 
@@ -13,7 +13,7 @@ const CustomersSay = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
