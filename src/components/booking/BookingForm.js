@@ -14,11 +14,14 @@ const BookingForm = ({ today, availableTimes, dispatchAvailableTimes }) => {
     validationSchema: Yup.object({
       date: Yup.string().required("Required"),
       time: Yup.string().required("Required"),
-      number_of_guests: Yup.number().required("Required"),
+      number_of_guests: Yup.number()
+        .required("Required")
+        .min(1, "Should be more than or equal to 1")
+        .max(10, "should be less than or equal to 10"),
       occasion: Yup.string(),
     }),
     onSubmit: (values) => {
-      submitAPI(values).then((res) => console.log("res"));
+      submitAPI(values).then((res) => console.log("Success!!"));
     },
   });
 
@@ -55,7 +58,11 @@ const BookingForm = ({ today, availableTimes, dispatchAvailableTimes }) => {
             </option>
             {availableTimes &&
               availableTimes.map((time) => (
-                <option key={time} value={time}>
+                <option
+                  key={time}
+                  value={time}
+                  disabled={time === "No available times for the selected date"}
+                >
                   {time}
                 </option>
               ))}
@@ -71,8 +78,6 @@ const BookingForm = ({ today, availableTimes, dispatchAvailableTimes }) => {
           <input
             type="number"
             placeholder="Enter a number"
-            min="1"
-            max="10"
             id="number_of_guests"
             {...formik.getFieldProps("number_of_guests")}
           />
