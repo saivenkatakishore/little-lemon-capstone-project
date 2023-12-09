@@ -1,5 +1,5 @@
 import "./CallToAction.scss";
-import restaurantImage from "../../assets/restaurantfood.jpg";
+import restaurantImage from "../../assets/img/restaurantfood.jpg";
 import { Link } from "react-router-dom";
 
 const CallToAction = () => (

@@ -1,63 +1,71 @@
 import "./BookingForm.scss";
-import { useEffect, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { submitAPI } from "../../assets/mockapi/mockAPI";
 
-const BookingForm = () => {
-  const [bookingForm, setBookingForm] = useState({
-    date: "",
-    time: "",
-    number_of_guests: "",
-    occasion: "",
+const BookingForm = ({ today, availableTimes, dispatchAvailableTimes }) => {
+  const formik = useFormik({
+    initialValues: {
+      date: today,
+      time: "",
+      number_of_guests: "",
+      occasion: "",
+    },
+    validationSchema: Yup.object({
+      date: Yup.string().required("Required"),
+      time: Yup.string().required("Required"),
+      number_of_guests: Yup.number().required("Required"),
+      occasion: Yup.string(),
+    }),
+    onSubmit: (values) => {
+      submitAPI(values).then((res) => console.log("res"));
+    },
   });
 
-  const [availableTimes, setAvailableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-  ]);
-
-  useEffect(() => {}, [bookingForm]);
+  const handleDateChange = (event) => {
+    formik.handleChange(event);
+    dispatchAvailableTimes(event.target.value);
+  };
 
   return (
-    <form className="reservation-form section-padding">
+    <form
+      className="reservation-form section-padding"
+      onSubmit={formik.handleSubmit}
+    >
       <div className="d-flex">
         <div className="form-field d-flex">
-          <label htmlFor="res-date" className="font-md">
+          <label htmlFor="date" className="font-md">
             Choose date
           </label>
           <input
+            id="date"
             type="date"
-            id="res-date"
-            value={bookingForm.date}
-            onChange={(e) =>
-              setBookingForm({ ...bookingForm, date: e.target.value })
-            }
+            {...formik.getFieldProps("date")}
+            onChange={handleDateChange}
           />
         </div>
+        {formik.touched.date && formik.errors.date}
         <div className="form-field d-flex">
-          <label
-            htmlFor="res-time"
-            className="font-md"
-            value={bookingForm.time}
-            onChange={(e) =>
-              setBookingForm({ ...bookingForm, time: e.target.value })
-            }
-          >
+          <label htmlFor="time" className="font-md">
             Choose time
           </label>
-          <select id="res-time ">
-            {availableTimes.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
-            ))}
+          <select id="time" {...formik.getFieldProps("time")}>
+            <option key="placeholder" value="" disabled>
+              Select
+            </option>
+            {availableTimes &&
+              availableTimes.map((time) => (
+                <option key={time} value={time}>
+                  {time}
+                </option>
+              ))}
           </select>
         </div>
+        {formik.touched.time && formik.errors.time}
       </div>
       <div className="d-flex">
         <div className="form-field d-flex">
-          <label htmlFor="guests" className="font-md">
+          <label htmlFor="number_of_guests" className="font-md">
             Number of guests
           </label>
           <input
@@ -65,36 +73,26 @@ const BookingForm = () => {
             placeholder="Enter a number"
             min="1"
             max="10"
-            id="guests"
-            value={bookingForm.number_of_guests}
-            onChange={(e) =>
-              setBookingForm({
-                ...bookingForm,
-                number_of_guests: e.target.value,
-              })
-            }
+            id="number_of_guests"
+            {...formik.getFieldProps("number_of_guests")}
           />
         </div>
+        {formik.touched.number_of_guests && formik.errors.number_of_guests}
         <div className="form-field d-flex">
           <label htmlFor="occasion" className="font-md">
             Occasion
           </label>
-          <select
-            id="occasion"
-            value={bookingForm.occasion}
-            onChange={(e) =>
-              setBookingForm({
-                ...bookingForm,
-                occasion: e.target.value,
-              })
-            }
-          >
-            <option>Birthday</option>
-            <option>Anniversary</option>
+          <select id="occasion" {...formik.getFieldProps("occasion")}>
+            <option key="placeholder" value="" disabled>
+              Select
+            </option>
+            <option key="birthday">Birthday</option>
+            <option key="anniversary">Anniversary</option>
           </select>
         </div>
+        {formik.touched.occasion && formik.errors.occasion}
       </div>
-      <div style={{textAlign: "right"}}>
+      <div style={{ textAlign: "right" }}>
         <button
           type="submit"
           className="btn btn-primary px-3 font-bold"

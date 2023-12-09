@@ -1,5 +1,5 @@
 import "./Specials.scss";
-import bike from "../../assets/bike.svg";
+import bike from "../../assets/img/bike.svg";
 
 const Specials = () => {
   const specialsList = [...mockList];

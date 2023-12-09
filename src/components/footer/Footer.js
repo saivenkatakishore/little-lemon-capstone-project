@@ -1,4 +1,4 @@
-import restaurant from "../../assets/restaurant.jpg";
+import restaurant from "../../assets/img/restaurant.jpg";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 

@@ -1,6 +1,6 @@
 import "./Chicago.scss";
-import chefA from "../../assets/MarioAdrianA.jpg";
-import chefB from "../../assets/MarioAdrianB.jpg";
+import chefA from "../../assets/img/MarioAdrianA.jpg";
+import chefB from "../../assets/img/MarioAdrianB.jpg";
 
 const Chicago = () => (
   <section className="section-padding chicago d-flex justify-between">

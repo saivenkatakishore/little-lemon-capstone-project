@@ -1,5 +1,5 @@
 import "./CustomersSay.scss";
-import star from "../../assets/star.png";
+import star from "../../assets/img/star.png";
 
 const CustomersSay = () => {
   return (
