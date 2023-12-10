@@ -1,13 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Please do npm i to get scss packages installed
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Homepage from "./components/home/Homepage";
+import BookingPage from "./components/booking/BookingPage";
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    Component: App,
+    children: [
+      {
+        path: "/",
+        Component: Homepage,
+      },
+      {
+        path: "/booking",
+        Component: BookingPage,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <RouterProvider router={appRouter}>
     <App />
-  </React.StrictMode>
+  </RouterProvider>
 );
 reportWebVitals();

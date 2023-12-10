@@ -1,0 +1,40 @@
+// Nav Styles
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 6rem);
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid;
+
+    @media screen and (min-width:1441px) {
+        width: calc(100% - 30rem);
+    }
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 1rem 0;
+
+        >li {
+            padding: 0 1rem;
+
+            a:not(:hover) {
+                text-decoration: none;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

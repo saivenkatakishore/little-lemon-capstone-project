@@ -1,0 +1,29 @@
+.card{
+    border: 2px solid #F4CE14;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0px 0px 8px #F4CE14;
+}
+
+a.close{
+    position: absolute;
+    right: 1rem;
+    top: 4px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    &:hover{
+        color: #005aff;
+    }
+}
+
+.justify-center{
+    justify-content: center;
+    .font-md{
+        padding-right: 2rem;
+    }
+    td{
+        padding-bottom: 1rem;
+    }
+}
