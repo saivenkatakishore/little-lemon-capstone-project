@@ -1,6 +1,7 @@
 import BookingForm from "./BookingForm";
 import { useEffect, useReducer, useState } from "react";
 import { fetchAPI } from "../../assets/mockapi/mockAPI";
+import BookingSuccess from "./BookingSuccess";
 
 const BookingPage = () => {
   let newdate = new Date();
@@ -34,7 +35,8 @@ const BookingPage = () => {
     getAvaialbleTimes(today);
   };
 
-  const [state, dispatch] = useReducer(updateTimes, null, initializeTimes);
+  const [timeVal, dispatch] = useReducer(updateTimes, null, initializeTimes);
+  const [resevationDetails, setResevationDetails] = useState(null);
 
   useEffect(() => {
     console.log(availableTimes);
@@ -55,7 +57,16 @@ const BookingPage = () => {
         today={today}
         availableTimes={availableTimes}
         dispatchAvailableTimes={dispatch}
+        setResevationDetails={setResevationDetails}
       />
+      <div id="success-page">
+        {resevationDetails && (
+          <BookingSuccess
+            resevationDetails={resevationDetails}
+            setResevationDetails={setResevationDetails}
+          />
+        )}
+      </div>
     </section>
   );
 };
